@@ -112,14 +112,25 @@ ul{
     top:0;
 }
 .side-menu:checked ~ .hamb .hamb-line::after {
-    transform: rotate(45deg);
+    transform: rotate(+45deg);
     top:0;
 }
-
-
+.conteudo-droga {
+    width: 100vw;
+    padding: 10px;
+}
+#img-def {
+    display: none;
+}
+.descricao {
+    width: 100vw;
+}
+.img-definicao {
+    width: 100%;
+}
 .rodape {
     width: 100vw;
-    text-align: center;
+    text-align:center;
 }
 
 .conteudo {
@@ -156,13 +167,13 @@ ul{
     }
 
     #logo {
-        width: 15vh;
-        margin: 5px;
+        width: 8vh;
+        margin: 8vh;
     }
-    .conteudo {
+    .conteudo-droga {
+        display: grid;
         grid-template-columns: 50% 50%;
-        grid-template-areas: 
-         "geral geral";
+        grid-template-areas: "def def";
     }
 
 }
@@ -190,13 +201,13 @@ ul{
     }
 
     #logo {
-        width: 15vh;
-        margin: 5px;
+        width: 16vh;
+        margin: 16vh;
     }
-    .conteudo {
+    .conteudo-droga {
+        display: grid;
         grid-template-columns: 33% 34% 33%;
-        grid-template-areas: 
-         "geral geral geral";
+        grid-template-areas: "def def def";
     }
 
 }
