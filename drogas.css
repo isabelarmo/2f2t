@@ -112,40 +112,48 @@ ul{
     top:0;
 }
 .side-menu:checked ~ .hamb .hamb-line::after {
-    transform: rotate(+45deg);
+    transform: rotate(45deg);
     top:0;
 }
-.conteudo-droga{
+.conteudo{
     width: 100vw;
-    padding: 10px;
+    display: grid;
 }
-#img-def{
-    display: none;
+.definicao {
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    flex-direction: column;
 }
-.descricao{
+#droga {
+    display: block;
+    width: 90%;
+}
+.geral{
     width: 100vw;
 }
-.img.definicao{
-    width: 100%;
-}
-
 
 .rodape {
     width: 100vw;
     text-align: center;
+    color: #110f0f;
+    background-color: rgb(197, 175, 212);
 }
 
-.conteudo {
-    background-color: rgb(121, 121, 121);
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-areas: "geral";
-}
 .geral {
     width: 100vw;
-    grid-area: geral;
+    grid-area: "geral";
 }
 
+div[class^="item-"]{
+    background-color: pink;
+    height: 200px;
+    margin: 5px;
+    grid-area: "info";
+}
+.info {
+    display: grid;
+}
 @media (min-width: 820px) {
     .nav{
         max-height: none;
@@ -169,34 +177,25 @@ ul{
     }
 
     #logo {
-        width: 8vh;
-        margin: 8vh;
+        width: 15vh;
+        margin: 5px;
     }
-    .conteudo-droga {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-areas:"def def";
-    }
-    .definicao{
-        display: flex;
-        width: 100vw;
-    }
-    .descricao{
-        height: 100%;
-        padding: 50px;
+    .geral {
         width: 70vw;
     }
-    .img-definicao{
-        display: block;
-        text-align: end;
-        height: 30vh;
-        width: 30vw;
+    .item1 {
+        text-align: right;
     }
-    #img-def{
+    #droga {
         display: block;
-        width: 100%;
     }
-
+    .info {
+        grid-template-columns: 50% 50%;
+        grid-area: "info" "info";
+    }
+    .definicao {
+        flex-direction: row;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -225,12 +224,9 @@ ul{
         width: 15vh;
         margin: 5px;
     }
-    .conteudo {
-        display: grid;
+    .info {
         grid-template-columns: 33% 34% 33%;
-        grid-template-areas:"def def def";
+        grid-area:  "info" "info" "info";
     }
-   
-    
 
 }
